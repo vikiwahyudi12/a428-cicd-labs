@@ -39,7 +39,7 @@ pipeline {
                     echo "Aplikasi berhasil dideploy! Bisa diakses di localhost:3000"
                     
                     echo "Menunggu 1 menit sebelum mematikan aplikasi..."
-                    sleep time: 1, unit: 'MINUTES'
+                    sleep time: 3, unit: 'MINUTES'
                     
                     sh "docker stop $CONTAINER_NAME"
                     sh "docker rm $CONTAINER_NAME"
